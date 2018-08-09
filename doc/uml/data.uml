@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.skplanet.nlp.data</OriginalElement>
+  <nodes>
+    <node x="251.0" y="292.0">com.skplanet.nlp.data.RawDocument</node>
+    <node x="145.5" y="146.0">com.skplanet.nlp.data.AbstractDocument</node>
+    <node x="0.0" y="292.0">com.skplanet.nlp.data.NLPDocument</node>
+    <node x="109.0" y="0.0">com.skplanet.nlp.data.Document</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.skplanet.nlp.data.AbstractDocument" target="com.skplanet.nlp.data.Document">
+      <point x="0.0" y="-48.0" />
+      <point x="0.0" y="48.0" />
+    </edge>
+    <edge source="com.skplanet.nlp.data.RawDocument" target="com.skplanet.nlp.data.AbstractDocument">
+      <point x="0.0" y="-70.5" />
+      <point x="366.5" y="267.0" />
+      <point x="288.75" y="267.0" />
+      <point x="47.75" y="48.0" />
+    </edge>
+    <edge source="com.skplanet.nlp.data.NLPDocument" target="com.skplanet.nlp.data.AbstractDocument">
+      <point x="0.0" y="-70.5" />
+      <point x="115.5" y="267.0" />
+      <point x="193.25" y="267.0" />
+      <point x="-47.75" y="48.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="241.0" y="216.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -1,0 +1,127 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.skplanet.nlp</groupId>
+	<artifactId>topinion</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>topinion</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<!-- 프로젝트의 artifact 를 배포할 저장소 -->
+	<!-- distributionManagement>
+		<repository>
+			<id>team-nlp-releases</id>
+			<name>team-nlp-releases</name>
+			<url>http://mvn.skplanet.com/content/repositories/team-nlp-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>team-nlp-snapshots</id>
+			<name>team-nlp-snapshots</name>
+			<url>http://mvn.skplanet.com/content/repositories/team-nlp-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement -->
+	<!-- dependency 에 정의된 라이브러리를 다운로드할 저장소 -->
+	<!-- repositories>
+		<repository>
+			<id>team-nlp-group</id>
+			<name>team-nlp-group</name>
+			<url>http://mvn.skplanet.com/content/groups/team-nlp-groups/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories -->
+	<!-- maven 이 사용하는 plugin 을 다운로드할 저장소 -->
+	<!-- pluginRepositories>
+		<pluginRepository>
+			<id>team-nlp-group</id>
+			<name>team-nlp-group</name>
+			<url>http://mvn.skplanet.com/content/groups/team-nlp-groups/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories -->
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.10</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/../lib/</outputDirectory>
+							<overWriteReleases>false</overWriteReleases>
+							<overWriteSnapshots>false</overWriteSnapshots>
+							<overWriteIfNewer>true</overWriteIfNewer>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<dependency>
+			<groupId>com.skplanet.nlp</groupId>
+			<artifactId>cli</artifactId>
+			<version>1.1.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.skplanet.nlp</groupId>
+			<artifactId>omp-config</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>cc.mallet</groupId>
+			<artifactId>mallet</artifactId>
+			<version>2.0.7</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.skplanet</groupId>
+			<artifactId>nlp_indexterm</artifactId>
+			<version>1.5.6</version>
+		</dependency>
+	</dependencies>
+</project>

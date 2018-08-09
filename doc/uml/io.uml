@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.skplanet.nlp.io</OriginalElement>
+  <nodes>
+    <node x="111.25" y="80.0">com.skplanet.nlp.io.AbstractLoader</node>
+    <node x="137.75" y="0.0">com.skplanet.nlp.io.Loader</node>
+    <node x="186.0" y="160.0">com.skplanet.nlp.io.NLPDocumentLoader</node>
+    <node x="0.0" y="160.0">com.skplanet.nlp.io.RawDocumentLoader</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.skplanet.nlp.io.RawDocumentLoader" target="com.skplanet.nlp.io.AbstractLoader">
+      <point x="0.0" y="-15.0" />
+      <point x="83.0" y="135.0" />
+      <point x="143.5" y="135.0" />
+      <point x="-32.25" y="15.0" />
+    </edge>
+    <edge source="com.skplanet.nlp.io.NLPDocumentLoader" target="com.skplanet.nlp.io.AbstractLoader">
+      <point x="0.0" y="-15.0" />
+      <point x="268.5" y="135.0" />
+      <point x="208.0" y="135.0" />
+      <point x="32.25" y="15.0" />
+    </edge>
+    <edge source="com.skplanet.nlp.io.AbstractLoader" target="com.skplanet.nlp.io.Loader">
+      <point x="0.0" y="-15.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="175.5" y="95.0" />
+  <SelectedNodes>
+    <node>com.skplanet.nlp.io.RawDocumentLoader</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
